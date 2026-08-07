@@ -1,80 +1,135 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Fade in page
+    /* ==========================
+       ELEMENTS
+    ========================== */
+
+    const hero = document.querySelector(".hero");
+    const enterBtn = document.querySelector(".enter");
+    const music = document.getElementById("bgMusic");
+    const invitation = document.getElementById("invitation");
+
+    /* ==========================
+       PAGE FADE
+    ========================== */
+
     document.body.style.opacity = "0";
 
     setTimeout(() => {
+
         document.body.style.transition = "opacity .8s";
+
         document.body.style.opacity = "1";
-    }, 100);
 
-    // ENTER button animation
-    const enterBtn = document.querySelector(".enter");
+    },100);
 
-    if (enterBtn) {
+    /* ==========================
+       GOLD PARTICLES
+    ========================== */
 
-        enterBtn.addEventListener("click", function (e) {
+    if(hero){
 
-            e.preventDefault();
+        for(let i=0;i<25;i++){
 
-            this.innerHTML = "WELCOME...";
+            const dot=document.createElement("span");
 
-            this.style.transform = "scale(.95)";
+            dot.className="particle";
 
-            this.style.pointerEvents = "none";
+            dot.style.left=Math.random()*100+"%";
 
-            // Play background music (Update 3)
-            const music = document.getElementById("bgMusic");
+            dot.style.top=Math.random()*100+"%";
 
-            if (music) {
+            dot.style.animationDelay=Math.random()*6+"s";
 
-                music.volume = 0.35;
-
-                music.play().catch(() => {});
-
-            }
-
-            // Smooth scroll
-            setTimeout(() => {
-
-                const invite = document.querySelector("#invitation");
-
-                if (invite) {
-
-                    invite.scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-                }
-
-            }, 700);
-
-        });
-
-    }
-
-    // Floating particles
-    const hero = document.querySelector(".hero");
-
-    if (hero) {
-
-        for (let i = 0; i < 25; i++) {
-
-            const dot = document.createElement("span");
-
-            dot.className = "particle";
-
-            dot.style.left = Math.random() * 100 + "%";
-
-            dot.style.top = Math.random() * 100 + "%";
-
-            dot.style.animationDelay = Math.random() * 6 + "s";
-
-            dot.style.animationDuration = (5 + Math.random() * 6) + "s";
+            dot.style.animationDuration=(5+Math.random()*6)+"s";
 
             hero.appendChild(dot);
 
         }
+
+    }
+
+    /* ==========================
+       BACKGROUND SLIDESHOW
+    ========================== */
+
+    const photos=[
+
+        "assets/photos/tatay1.jpeg",
+
+        "assets/photos/tatay2.jpeg",
+
+        "assets/photos/tatay3.jpeg",
+
+        "assets/photos/tatay4.jpeg",
+
+        "assets/photos/tatay5.jpeg"
+
+    ];
+
+    let currentPhoto=0;
+
+    function nextPhoto(){
+
+        currentPhoto++;
+
+        if(currentPhoto>=photos.length){
+
+            currentPhoto=0;
+
+        }
+
+        document.documentElement.style.setProperty(
+
+            "--hero-image",
+
+            `url("${photos[currentPhoto]}")`
+
+        );
+
+    }
+
+    setInterval(nextPhoto,7000);
+
+    /* ==========================
+       ENTER BUTTON
+    ========================== */
+
+    if(enterBtn){
+
+        enterBtn.addEventListener("click",(e)=>{
+
+            e.preventDefault();
+
+            enterBtn.innerHTML="WELCOME...";
+
+            enterBtn.style.pointerEvents="none";
+
+            enterBtn.style.transform="scale(.96)";
+
+            if(music){
+
+                music.volume=.35;
+
+                music.play().catch(()=>{});
+
+            }
+
+            setTimeout(()=>{
+
+                if(invitation){
+
+                    invitation.scrollIntoView({
+
+                        behavior:"smooth"
+
+                    });
+
+                }
+
+            },700);
+
+        });
 
     }
 
