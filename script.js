@@ -109,11 +109,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(music){
 
-                music.volume=.35;
+    music.volume=0;
 
-                music.play().catch(()=>{});
+    music.play().catch(()=>{});
 
-            }
+    let volume=0;
+
+    const fade=setInterval(()=>{
+
+        volume+=0.03;
+
+        if(volume>=0.35){
+
+            volume=0.35;
+
+            clearInterval(fade);
+
+        }
+
+        music.volume=volume;
+
+    },120);
+
+}
 
             setTimeout(()=>{
 
