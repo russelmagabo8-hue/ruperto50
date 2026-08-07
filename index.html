@@ -1,44 +1,295 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<meta name='theme-color' content='#c9a12c'>
-<link rel='manifest' href='manifest.json'>
-<title>Golden 50 | Ruperto G. Magabo Jr.</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ruperto G. Magabo Jr. | 50th Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.json">
+
 <style>
-body{margin:0;font-family:system-ui;background:#faf7ef;color:#333}
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;
-background:linear-gradient(180deg,#fff,#f6ecd0);}
-.card{max-width:700px;background:#fff;border-radius:24px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,.15);text-align:center}
-h1{font-size:58px;color:#c9a12c;margin:0}
-.gold{color:#c9a12c}
-.btn{display:inline-block;margin:8px;padding:14px 24px;border-radius:30px;background:#c9a12c;color:white;text-decoration:none}
-.sec{padding:50px 20px;max-width:900px;margin:auto}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.ph{height:180px;border:2px dashed #c9a12c;border-radius:16px;display:flex;align-items:center;justify-content:center}
-</style></head><body>
-<section class='hero'><div class='card'>
-<div class='gold'>✨ YOU'RE INVITED ✨</div>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:#071b16;
+color:white;
+overflow-x:hidden;
+
+}
+
+.hero{
+
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("assets/photos/tatay3.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+}
+
+.card{
+
+width:100%;
+max-width:430px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:30px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+animation:fadeUp 1s;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#b58d2b;
+
+border-radius:30px;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+font-family:Cinzel,serif;
+
+font-size:44px;
+
+line-height:1.1;
+
+margin-bottom:10px;
+
+}
+
+.name{
+
+font-size:28px;
+
+font-weight:600;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+color:#d8d8d8;
+
+margin-bottom:30px;
+
+}
+
+.info{
+
+margin:10px 0;
+
+font-size:18px;
+
+}
+
+.enter{
+
+margin-top:35px;
+
+display:inline-block;
+
+padding:16px 38px;
+
+background:linear-gradient(135deg,#e5c76b,#9b7b20);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+.enter:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.4);
+
+}
+
+.footer{
+
+padding:70px 25px;
+
+text-align:center;
+
+background:#0b2b23;
+
+}
+
+.footer h2{
+
+font-family:Cinzel;
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.footer p{
+
+max-width:650px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="card">
+
+<div class="badge">
+
+🥃 CHEERS TO 50 YEARS
+
+</div>
+
 <h1>50</h1>
-<h2 class='gold'>Golden Birthday Celebration</h2>
-<h3>Ruperto G. Magabo Jr.</h3>
-<p><b>August 15, 2026</b><br>2:00 PM onwards<br>Lipa Grill</p>
-<h2 id='cd'></h2>
-<a class='btn' href='https://maps.google.com/?q=Lipa+Grill+Lipa+City'>📍 View Location</a>
-<a class='btn' href='#rsvp'>💌 RSVP</a>
-</div></section>
-<section class='sec'><h2>Gallery</h2><div class='gallery'>
-<div class='ph'>Add Photo</div><div class='ph'>Add Photo</div><div class='ph'>Add Photo</div>
-</div></section>
-<section class='sec' id='rsvp'><h2>RSVP</h2>
-<input placeholder='Your Name' style='padding:12px;width:100%;max-width:400px'><br><br>
-<textarea placeholder='Message' style='padding:12px;width:100%;max-width:400px;height:120px'></textarea><br><br>
-<button class='btn'>Send</button></section>
-<script>
-const t=new Date('2026-08-15T14:00:00');
-setInterval(()=>{
-let diff=t-new Date();
-if(diff<0){cd.textContent='See you at the celebration!';return;}
-let d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);
-cd.textContent=`${d}d ${h}h ${m}m ${s}s`;
-},1000);
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
-</script></body></html>
+
+<div class="name">
+
+Ruperto G. Magabo Jr.
+
+</div>
+
+<div class="subtitle">
+
+A Golden Birthday Celebration
+
+</div>
+
+<div class="info">
+
+📅 August 15, 2026
+
+</div>
+
+<div class="info">
+
+🕑 2:00 PM Onwards
+
+</div>
+
+<div class="info">
+
+📍 Lipa Grill
+
+</div>
+
+<a href="#welcome" class="enter">
+
+ENTER CELEBRATION
+
+</a>
+
+</div>
+
+</section>
+
+<section class="footer" id="welcome">
+
+<h2>
+
+Welcome!
+
+</h2>
+
+<p>
+
+Thank you for celebrating this wonderful milestone with us.
+
+This invitation is only the beginning.
+
+More surprises including the live countdown, photo gallery,
+music, RSVP, and interactive experience will be added in the
+next updates.
+
+See you on August 15, 2026!
+
+</p>
+
+</section>
+
+</body>
+
+</html>
