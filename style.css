@@ -387,3 +387,91 @@ opacity:0;
 }
 
 }
+/* =========================
+   LOCATION SECTION
+========================= */
+
+.location-section{
+    padding:90px 20px;
+    background:#0b2b23;
+    text-align:center;
+}
+
+.location-section h2{
+    font-family:'Cinzel',serif;
+    font-size:42px;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.location-section h3{
+    font-size:32px;
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.location-section p{
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.map-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#d4af37;
+
+    color:#0b2b23;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+    margin-bottom:40px;
+
+    box-shadow:0 10px 25px rgba(212,175,55,.25);
+
+}
+
+.map-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#f2c94c;
+
+    box-shadow:0 18px 35px rgba(212,175,55,.4);
+
+}
+
+.map-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:2px solid rgba(212,175,55,.35);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.map-container iframe{
+
+    width:100%;
+
+    height:450px;
+
+    border:none;
+
+}
