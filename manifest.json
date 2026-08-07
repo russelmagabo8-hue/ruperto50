@@ -1,9 +1,0 @@
-{
-"name":"Ruperto 50th Birthday",
-"short_name":"Ruperto50",
-"display":"standalone",
-"start_url":"./",
-"background_color":"#faf7ef",
-"theme_color":"#c9a12c",
-"icons":[{"src":"assets/icon-512.png","sizes":"512x512","type":"image/png"}]
-}
