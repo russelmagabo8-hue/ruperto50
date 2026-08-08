@@ -524,9 +524,9 @@ opacity:0;
     transform:scale(.97);
 
 }
-/* =========================
-   INTRO SCREEN
-========================= */
+/* ======================================
+   LUXURY GOLDEN BIRTHDAY INTRO
+====================================== */
 
 #introScreen{
     position:fixed;
@@ -534,118 +534,218 @@ opacity:0;
     display:flex;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+
     background:
-    radial-gradient(circle at top,#244d41,#061b18 80%);
+    radial-gradient(circle at top,
+    #6b5717 0%,
+    #18342c 30%,
+    #081512 100%);
+
     z-index:9999;
     transition:opacity .8s ease;
 }
 
+/* Soft spotlight */
+#introScreen::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,215,0,.12),
+    transparent 70%);
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* Animated gold glow */
+#introScreen::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 30%,rgba(255,215,0,.05),transparent 35%),
+    radial-gradient(circle at 80% 75%,rgba(255,215,0,.05),transparent 35%);
+    animation:bgGlow 8s ease-in-out infinite alternate;
+}
+
 .intro-content{
 
-    width:min(90%,560px);
+    position:relative;
+    z-index:2;
 
-    padding:60px 45px;
+    width:min(90%,620px);
+
+    padding:70px 60px;
 
     text-align:center;
 
     border-radius:30px;
 
-    background:rgba(255,255,255,.05);
+    background:
+    linear-gradient(
+    180deg,
+    rgba(35,35,35,.78),
+    rgba(8,8,8,.90));
 
-    border:1px solid rgba(212,175,55,.25);
+    border:1px solid rgba(212,175,55,.45);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.45),
-    0 0 35px rgba(212,175,55,.15);
+    0 35px 90px rgba(0,0,0,.65),
+    0 0 60px rgba(212,175,55,.18);
 
     animation:introAppear 1s ease;
 }
 
+/* Gold divider */
+.gold-line{
+
+    width:180px;
+    height:2px;
+
+    margin:0 auto 35px;
+
+    background:
+    linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent);
+
+    animation:shineLine 3s linear infinite;
+}
+
 .intro-small{
 
-    color:#f5d77d;
+    font-size:15px;
 
-    letter-spacing:5px;
+    color:#f8d66c;
 
-    font-size:14px;
+    letter-spacing:6px;
 
-    margin-bottom:20px;
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+
+    font-weight:600;
 }
 
 .intro-title{
 
     font-family:"Cinzel",serif;
 
-    font-size:46px;
+    font-size:64px;
 
-    line-height:1.2;
+    line-height:1.1;
 
-    margin-bottom:20px;
+    color:white;
+
+    text-shadow:
+    0 0 20px rgba(212,175,55,.18);
+
+    margin-bottom:30px;
 }
 
 .intro-subtitle{
 
-    color:#ddd;
+    font-size:19px;
 
-    line-height:1.9;
+    color:#ececec;
 
-    font-size:17px;
-
-    margin-bottom:35px;
-}
-
-.intro-event{
-
-    color:#d4af37;
-
-    font-family:"Cinzel",serif;
-
-    font-size:28px;
+    line-height:2;
 
     margin-bottom:40px;
 }
 
-.intro-btn{
+.intro-event{
 
-    padding:18px 48px;
+    font-family:"Cinzel",serif;
+
+    font-size:34px;
+
+    color:#d4af37;
+
+    line-height:1.5;
+
+    margin-bottom:50px;
+
+    text-shadow:
+    0 0 15px rgba(212,175,55,.15);
+}
+
+.intro-btn{
 
     border:none;
 
-    border-radius:60px;
+    cursor:pointer;
 
-    background:linear-gradient(135deg,#FFD86B,#B8860B);
+    padding:20px 60px;
 
-    color:white;
+    border-radius:999px;
+
+    font-size:15px;
 
     font-weight:700;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
-    cursor:pointer;
+    color:#1b1b1b;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff7c9,
+    #e2b84b,
+    #b98607);
+
+    box-shadow:
+    0 12px 35px rgba(212,175,55,.45);
 
     transition:.35s;
 
-    box-shadow:0 15px 35px rgba(212,175,55,.35);
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Shiny animation */
+.intro-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.7),
+    transparent);
+
+    transform:skewX(-25deg);
+
+    animation:buttonShine 3s infinite;
 }
 
 .intro-btn:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-5px) scale(1.04);
 
-    box-shadow:0 20px 45px rgba(212,175,55,.45);
-}
-
-.gold-line{
-
-    width:140px;
-
-    height:2px;
-
-    margin:30px auto;
-
-    background:linear-gradient(to right,transparent,#d4af37,transparent);
+    box-shadow:
+    0 0 35px rgba(255,215,0,.45),
+    0 18px 45px rgba(0,0,0,.45);
 }
 
 @keyframes introAppear{
@@ -654,7 +754,7 @@ opacity:0;
 
         opacity:0;
 
-        transform:translateY(35px);
+        transform:translateY(40px) scale(.97);
 
     }
 
@@ -668,3 +768,92 @@ opacity:0;
 
 }
 
+@keyframes shineLine{
+
+    from{
+
+        opacity:.4;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes buttonShine{
+
+    0%{
+
+        left:-120%;
+
+    }
+
+    40%{
+
+        left:140%;
+
+    }
+
+    100%{
+
+        left:140%;
+
+    }
+
+}
+
+@keyframes bgGlow{
+
+    from{
+
+        opacity:.5;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+.intro-content{
+
+    padding:50px 30px;
+
+}
+
+.intro-title{
+
+    font-size:44px;
+
+}
+
+.intro-event{
+
+    font-size:25px;
+
+}
+
+.intro-subtitle{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.intro-btn{
+
+    width:100%;
+
+}
+
+}
