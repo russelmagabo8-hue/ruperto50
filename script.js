@@ -1,53 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     // =========================
-// INTRO ENVELOPE
-// =========================
-
-const introScreen = document.getElementById("introScreen");
-const website = document.getElementById("website");
-const envelope = document.querySelector(".envelope-wrapper");
-
-if (website) {
-    website.style.display = "none";
-}
-
-if (envelope) {
-    envelope.addEventListener("click", () => {
-
-        envelope.style.pointerEvents = "none";
-
-        const flap = document.querySelector(".flap");
-        const letter = document.querySelector(".letter");
-
-        if (flap) {
-            flap.style.transform = "rotateX(180deg)";
-        }
-
-        if (letter) {
-            letter.style.transform = "translateY(-50px)";
-        }
-
-        setTimeout(() => {
-
-            introScreen.style.opacity = "0";
-            introScreen.style.transition = "opacity .8s ease";
-
-            setTimeout(() => {
-
-                introScreen.style.display = "none";
-                website.style.display = "block";
-
-                // Start music
-                playMusic();
-
-            }, 800);
-
-        }, 700);
-
-    });
-}
-
-    // =========================
     // BACKGROUND SLIDESHOW
     // =========================
 
