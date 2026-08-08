@@ -335,10 +335,51 @@ if (envelope) {
 
     images.forEach(src=>{
 
-        const img = new Image();
+    const img = new Image();
 
-        img.src = src;
+    img.src = src;
+
+});
+
+// =========================
+// OPEN INVITATION
+// =========================
+
+const openInvitation =
+document.getElementById("openInvitation");
+
+const intro =
+document.getElementById("introScreen");
+
+const website =
+document.getElementById("website");
+
+if(openInvitation){
+
+    openInvitation.addEventListener("click",()=>{
+
+        openInvitation.classList.add("opened");
+
+        setTimeout(()=>{
+
+            intro.style.opacity="0";
+
+            setTimeout(()=>{
+
+                intro.style.display="none";
+
+                website.style.display="block";
+
+                playMusic();
+
+                window.scrollTo(0,0);
+
+            },700);
+
+        },800);
 
     });
+
+}
 
 });
