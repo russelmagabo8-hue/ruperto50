@@ -475,3 +475,52 @@ opacity:0;
     border:none;
 
 }
+/* ===========================
+   GOOGLE MAP BUTTON
+=========================== */
+
+.map-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin:25px 0;
+
+    padding:14px 34px;
+
+    background:linear-gradient(135deg,#b88a2b,#f4d06f);
+
+    color:#143324;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border-radius:50px;
+
+    border:2px solid rgba(255,255,255,.15);
+
+    transition:all .35s ease;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.map-btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,.45),
+        0 15px 30px rgba(0,0,0,.35);
+
+    background:linear-gradient(135deg,#ffd86b,#fff2b2);
+
+    color:#143324;
+}
+
+.map-btn:active{
+
+    transform:scale(.97);
+
+}
