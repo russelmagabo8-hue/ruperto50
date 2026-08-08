@@ -297,38 +297,33 @@ document.addEventListener("DOMContentLoaded", () => {
 // OPEN INVITATION
 // =========================
 
-const openInvitation =
-document.getElementById("openInvitation");
+const openInvitation = document.getElementById("openInvitation");
+const intro = document.getElementById("introScreen");
+const website = document.getElementById("website");
 
-const intro =
-document.getElementById("introScreen");
+if (website) {
+    website.style.display = "none";
+}
 
-const website =
-document.getElementById("website");
+if (openInvitation) {
 
-if(openInvitation){
+    openInvitation.addEventListener("click", () => {
 
-    openInvitation.addEventListener("click",()=>{
+        intro.style.opacity = "0";
 
-        openInvitation.classList.add("opened");
+        setTimeout(() => {
 
-        setTimeout(()=>{
+            intro.style.display = "none";
+            website.style.display = "block";
 
-            intro.style.opacity="0";
+            playMusic();
 
-            setTimeout(()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
-                intro.style.display="none";
-
-                website.style.display="block";
-
-                playMusic();
-
-                window.scrollTo(0,0);
-
-            },700);
-
-        },800);
+        }, 700);
 
     });
 
