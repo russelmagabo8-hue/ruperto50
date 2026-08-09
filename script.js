@@ -213,7 +213,99 @@ document.addEventListener("DOMContentLoaded", () => {
             observer.observe(section);
 
         });
+// =========================
+// PHOTO GALLERY
+// =========================
 
+const gallerySlides =
+    document.querySelectorAll(".gallery-slide");
+
+const galleryPrev =
+    document.getElementById("galleryPrev");
+
+const galleryNext =
+    document.getElementById("galleryNext");
+
+let galleryIndex = 0;
+
+
+// Show selected photo
+
+function showGallerySlide(index){
+
+    if(!gallerySlides.length) return;
+
+
+    // Loop back to last photo
+
+    if(index < 0){
+
+        galleryIndex =
+            gallerySlides.length - 1;
+
+    }
+
+    // Loop back to first photo
+
+    else if(index >= gallerySlides.length){
+
+        galleryIndex = 0;
+
+    }
+
+    else{
+
+        galleryIndex = index;
+
+    }
+
+
+    // Remove active from all photos
+
+    gallerySlides.forEach(slide => {
+
+        slide.classList.remove("active");
+
+    });
+
+
+    // Show current photo
+
+    gallerySlides[galleryIndex]
+        .classList.add("active");
+
+}
+
+
+// Previous button
+
+if(galleryPrev){
+
+    galleryPrev.addEventListener("click", () => {
+
+        showGallerySlide(galleryIndex - 1);
+
+    });
+
+}
+
+
+// Next button
+
+if(galleryNext){
+
+    galleryNext.addEventListener("click", () => {
+
+        showGallerySlide(galleryIndex + 1);
+
+    });
+
+}
+
+
+// Make sure first photo is active
+
+showGallerySlide(0);
 
     // =========================
     // OPEN INVITATION
