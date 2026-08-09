@@ -31,19 +31,11 @@ body{
 }
 
 .hero{
-
     position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+    min-height:auto;
+    width:100%;
+    padding:20px 0 40px;
     overflow:hidden;
-
 }
 .container{
 
@@ -556,13 +548,14 @@ opacity:0;
 PHOTO GALLERY
 ========================================= */
 
-.gallery-widget {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    overflow: hidden;
-    background: #061b18;
+.gallery-widget{
+    position:relative;
+    width:100%;
+    height:50vh;
+    min-height:350px;
+    max-height:550px;
+    overflow:hidden;
+    background:#061b18;
 }
 
 .gallery-slides {
@@ -703,45 +696,49 @@ GALLERY ARROWS
 MOBILE
 ========================= */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-    .gallery-widget {
-        height: 100vh;
-        min-height: 500px;
+    .gallery-widget{
+        height:50vh;
+        min-height:320px;
+        max-height:500px;
     }
 
-    .gallery-arrow {
-        width: 48px;
-        height: 48px;
-
-        font-size: 34px;
+    .gallery-arrow{
+        width:48px;
+        height:48px;
+        font-size:34px;
     }
 
-    .gallery-prev {
-        left: 15px;
+    .gallery-prev{
+        left:15px;
     }
 
-    .gallery-next {
-        right: 15px;
+    .gallery-next{
+        right:15px;
     }
 
 }
 
-@media (max-width: 480px) {
+@media(max-width:480px){
 
-    .gallery-arrow {
-        width: 44px;
-        height: 44px;
-
-        font-size: 30px;
+    .gallery-widget{
+        height:45vh;
+        min-height:300px;
     }
 
-    .gallery-prev {
-        left: 10px;
+    .gallery-arrow{
+        width:44px;
+        height:44px;
+        font-size:30px;
     }
 
-    .gallery-next {
-        right: 10px;
+    .gallery-prev{
+        left:10px;
+    }
+
+    .gallery-next{
+        right:10px;
     }
 
 }
