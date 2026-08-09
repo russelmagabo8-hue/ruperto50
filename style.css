@@ -749,7 +749,7 @@ MOBILE
 .invitation-widgets {
     width: 100%;
     max-width: 900px;
-    margin: 8px auto 0;
+    margin: 0 auto;
     padding: 0 7px;
 
     display: grid;
@@ -761,7 +761,7 @@ MOBILE
     min-width: 0;
     width: 100%;
 
-    padding: 9px 3px;
+    padding: 18px 3px;
 
     background: rgba(255,255,255,.04);
 
@@ -829,11 +829,10 @@ MOBILE
         gap: 4px;
     }
 
-    .widget-card {
-        padding: 8px 2px;
-        border-radius: 6px;
-    }
-
+   .widget-card {
+    padding: 18px 2px;
+    border-radius: 6px;
+}
     .widget-icon {
         font-size: 18px;
         margin-bottom: 4px;
