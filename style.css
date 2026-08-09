@@ -742,3 +742,109 @@ MOBILE
     }
 
 }
+/* =========================
+   INVITATION WIDGETS
+========================= */
+
+.invitation-widgets {
+    width: 100%;
+    max-width: 900px;
+    margin: 8px auto 0;
+    padding: 0 7px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.widget-card {
+    min-width: 0;
+    width: 100%;
+
+    padding: 9px 3px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(212,175,55,.55);
+    border-radius: 7px;
+
+    color: #fff;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+    /* important dahil button ito */
+    font-family: Poppins, sans-serif;
+}
+
+.widget-card:hover {
+    background: rgba(212,175,55,.12);
+    border-color: #d4af37;
+
+    transform: translateY(-2px);
+}
+
+.widget-icon {
+    font-size: 19px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.widget-title {
+    font-family: "Cinzel", serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    color: #f5d77d;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.widget-text {
+    margin-top: 3px;
+
+    font-size: 7px;
+    line-height: 1.3;
+
+    color: #ddd;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MOBILE WIDGETS
+========================= */
+
+@media (max-width: 480px) {
+
+    .invitation-widgets {
+        width: 100%;
+        padding: 0 7px;
+        gap: 4px;
+    }
+
+    .widget-card {
+        padding: 8px 2px;
+        border-radius: 6px;
+    }
+
+    .widget-icon {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .widget-title {
+        font-size: 7.5px;
+    }
+
+    .widget-text {
+        font-size: 6.5px;
+    }
+
+}
