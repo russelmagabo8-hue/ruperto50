@@ -229,38 +229,9 @@ const galleryNext =
 let galleryIndex = 0;
 
 
-// Show selected photo
-
 function showGallerySlide(index){
 
     if(!gallerySlides.length) return;
-
-
-    // Loop back to last photo
-
-    if(index < 0){
-
-        galleryIndex =
-            gallerySlides.length - 1;
-
-    }
-
-    // Loop back to first photo
-
-    else if(index >= gallerySlides.length){
-
-        galleryIndex = 0;
-
-    }
-
-    else{
-
-        galleryIndex = index;
-
-    }
-
-
-    // Remove active from all photos
 
     gallerySlides.forEach(slide => {
 
@@ -268,8 +239,20 @@ function showGallerySlide(index){
 
     });
 
+    galleryIndex = index;
 
-    // Show current photo
+    if(galleryIndex < 0){
+
+        galleryIndex =
+            gallerySlides.length - 1;
+
+    }
+
+    if(galleryIndex >= gallerySlides.length){
+
+        galleryIndex = 0;
+
+    }
 
     gallerySlides[galleryIndex]
         .classList.add("active");
@@ -277,7 +260,7 @@ function showGallerySlide(index){
 }
 
 
-// Previous button
+// PREVIOUS PHOTO
 
 if(galleryPrev){
 
@@ -290,7 +273,7 @@ if(galleryPrev){
 }
 
 
-// Next button
+// NEXT PHOTO
 
 if(galleryNext){
 
@@ -303,7 +286,7 @@ if(galleryNext){
 }
 
 
-// Make sure first photo is active
+// FIRST PHOTO
 
 showGallerySlide(0);
 
