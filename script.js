@@ -340,6 +340,34 @@ showGallerySlide(0);
         });
 
     }
+// =========================
+// INVITATION WIDGETS
+// =========================
 
+const widgetCards =
+    document.querySelectorAll(".widget-card");
+
+widgetCards.forEach(widget => {
+
+    widget.addEventListener("click", () => {
+
+        const targetId =
+            widget.getAttribute("data-target");
+
+        const target =
+            document.getElementById(targetId);
+
+        if(target){
+
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        }
+
+    });
+
+});
 
 });
