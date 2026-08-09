@@ -34,7 +34,7 @@ body{
     position:relative;
     min-height:auto;
     width:100%;
-    padding:20px 0 40px;
+    padding:0;
     overflow:hidden;
 }
 .container{
