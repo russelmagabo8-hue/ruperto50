@@ -542,18 +542,15 @@ const message =
         }
 
 
-        emailjs.send(
-            "service_tzjnl1u",
-            "template_kky1xou",
-            {
-                guest_name: guestName,
-                attendance: attendance.value,
-                message: message
-            },
-            {
-                publicKey: "udwniAMHg94TYKIsn"
-            }
-        )
+       emailjs.send(
+    "default_service",
+    "template_kky1xou",
+    {
+        guest_name: guestName,
+        attendance: attendance.value,
+        message: message
+    }
+)
 
         .then(function(response) {
 
