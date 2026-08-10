@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playMusic(){
 
-        if(!bgMusic) return;
+    if(!bgMusic) return;
 
-        if(musicStarted) return;
+    bgMusic.volume = 0.35;
 
-        bgMusic.volume = 0.35;
+    if(bgMusic.ended){
+        bgMusic.currentTime = 0;
+    }
+
+    if(bgMusic.paused){
 
         bgMusic.play().then(() => {
 
@@ -23,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }).catch(() => {});
 
     }
+
+}
 
 
     // =========================
