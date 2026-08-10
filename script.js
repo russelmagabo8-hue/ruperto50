@@ -483,110 +483,81 @@ backButtons.forEach(button => {
     });
 
 });
-    // =========================
+  // =========================
 // RSVP FORM + EMAILJS
 // =========================
 
-const rsvpForm =
-    document.getElementById("rsvpForm");
+const rsvpForm = document.getElementById("rsvpForm");
+const rsvpStatus = document.getElementById("rsvpStatus");
+const rsvpSubmit = document.getElementById("rsvpSubmit");
 
-const rsvpStatus =
-    document.getElementById("rsvpStatus");
+if (rsvpForm) {
 
-const rsvpSubmit =
-    document.getElementById("rsvpSubmit");
+    rsvpForm.addEventListener("submit", function(event) {
 
-
-if(rsvpForm){
-
-    rsvpForm.addEventListener("submit", function(event){
-
+        // STOP the form from opening/reloading the page
         event.preventDefault();
+        event.stopPropagation();
 
-
-        // Disable button habang nagsesend
-        if(rsvpSubmit){
-
+        if (rsvpSubmit) {
             rsvpSubmit.disabled = true;
-
-            rsvpSubmit.textContent =
-                "Sending... 💌";
-
+            rsvpSubmit.textContent = "Sending... 💌";
         }
 
-
-        if(rsvpStatus){
-
-            rsvpStatus.textContent =
-                "Sending your RSVP...";
-
+        if (rsvpStatus) {
+            rsvpStatus.textContent = "Sending your RSVP...";
         }
 
-
-        // SEND EMAIL
         emailjs.sendForm(
             "service_tzjnl1u",
             "template_kkx1oxu",
-            this
+            rsvpForm
         )
 
-        .then(() => {
+        .then(function() {
 
             console.log("RSVP SENT SUCCESSFULLY");
 
-
-            if(rsvpStatus){
-
+            if (rsvpStatus) {
                 rsvpStatus.textContent =
                     "Thank you! Your RSVP has been sent successfully. 💌";
-
             }
 
-
-            if(rsvpSubmit){
-
-                rsvpSubmit.disabled = false;
-
-                rsvpSubmit.textContent =
-                    "✓ RSVP Sent";
-
+            if (rsvpSubmit) {
+                rsvpSubmit.disabled = true;
+                rsvpSubmit.textContent = "✓ RSVP Sent";
             }
 
+            // Return to homepage after successful submission
+            setTimeout(function() {
 
-            // Clear form
-            rsvpForm.reset();
+                window.location.href = "index.html";
+
+            }, 1500);
 
         })
 
-        .catch((error) => {
+        .catch(function(error) {
 
-            console.error(
-                "RSVP EMAIL ERROR:",
-                error
-            );
+            console.error("RSVP EMAIL ERROR:", error);
 
-
-            if(rsvpStatus){
-
+            if (rsvpStatus) {
                 rsvpStatus.textContent =
                     "Sorry, something went wrong. Please try again.";
-
             }
 
-
-            if(rsvpSubmit){
-
+            if (rsvpSubmit) {
                 rsvpSubmit.disabled = false;
-
-                rsvpSubmit.textContent =
-                    "💌 Submit RSVP";
-
+                rsvpSubmit.textContent = "💌 Submit RSVP";
             }
 
         });
 
+        return false;
+
     });
 
 }
+
 
 });
