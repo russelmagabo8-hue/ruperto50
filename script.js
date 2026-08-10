@@ -573,10 +573,18 @@ const message =
             // Return to homepage
             setTimeout(function() {
 
-                window.location.href = "/ruperto50/#invitation";
+    const backButton = document.querySelector(".page-back-btn");
 
-            }, 1500);
+    if (backButton) {
+        backButton.click();
+    }
 
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}, 1500);
         })
 
         .catch(function(error) {
