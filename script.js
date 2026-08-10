@@ -499,7 +499,7 @@ if (rsvpForm) {
         event.stopPropagation();
 
       const guestNameEl =
-    rsvpForm.querySelector('input[type="text"]');
+    document.getElementById("guestName");
 
 const attendance =
     rsvpForm.querySelector(
@@ -507,7 +507,7 @@ const attendance =
     );
 
 const messageEl =
-    rsvpForm.querySelector('textarea');
+    document.getElementById("message");
 
 if (!guestNameEl || !messageEl) {
     console.error("RSVP name or message field not found.");
