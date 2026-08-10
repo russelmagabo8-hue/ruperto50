@@ -573,7 +573,7 @@ const message =
             // Return to homepage
             setTimeout(function() {
 
-                window.location.href = "/ruperto50/";
+                window.location.href = "/ruperto50/#invitation";
 
             }, 1500);
 
