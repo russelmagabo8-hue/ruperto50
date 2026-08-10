@@ -855,3 +855,72 @@ MOBILE
     }
 
 }
+/* =========================================
+   SEPARATE INVITATION PAGES
+========================================= */
+
+.invitation-page {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    background: var(--bg);
+}
+
+.invitation-page.active {
+    display: block;
+}
+
+/* BACK BUTTON */
+
+.page-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 22px;
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(212,175,55,.6);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.05);
+    color: var(--gold2);
+
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* PAGE CONTENT */
+
+.invitation-page h2 {
+    font-family: "Cinzel", serif;
+    color: var(--gold);
+    text-align: center;
+}
+
+.invitation-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .invitation-page {
+        min-height: 100vh;
+        padding: 20px 10px;
+    }
+
+    .page-back-btn {
+        margin-bottom: 20px;
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+
+}
