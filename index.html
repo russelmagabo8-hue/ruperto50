@@ -1,17 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruperto G. Magabo Jr. | 50th Birthday</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Ruperto G. Magabo Jr. | 50th Birthday</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
+
 <body>
+
+
+<!-- =====================================================
+     INTRO SCREEN
+===================================================== -->
+
 <div id="introScreen">
 
     <div class="intro-overlay">
@@ -53,178 +79,548 @@
 </div>
 
 
-<div id="website" style="display:none;">
 
+<!-- =====================================================
+     BACKGROUND MUSIC
+===================================================== -->
 
-   <section class="hero">
-
-    <div class="gallery-widget">
-
-        <button class="gallery-arrow gallery-prev" id="galleryPrev">
-            ‹
-        </button>
-
-        <div class="gallery-slides">
-
-            <div class="gallery-slide active">
-                <img
-                    src="assets/photos/tatay1.jpeg"
-                    alt="Ruperto G. Magabo Jr."
-                >
-            </div>
-
-            <div class="gallery-slide">
-                <img
-                    src="assets/photos/tatay2.jpeg"
-                    alt="Ruperto G. Magabo Jr."
-                >
-            </div>
-
-            <div class="gallery-slide">
-                <img
-                    src="assets/photos/tatay3.jpeg"
-                    alt="Ruperto G. Magabo Jr."
-                >
-            </div>
-
-            <div class="gallery-slide">
-                <img
-                    src="assets/photos/tatay4.jpeg"
-                    alt="Ruperto G. Magabo Jr."
-                >
-            </div>
-
-            <div class="gallery-slide">
-                <img
-                    src="assets/photos/tatay5.jpeg"
-                    alt="Ruperto G. Magabo Jr."
-                >
-            </div>
-
-        </div>
-
-        <button class="gallery-arrow gallery-next" id="galleryNext">
-            ›
-        </button>
-
-    </div>
-
-</section>
-<!-- WIDGETS DITO -->
-
-<div class="invitation-widgets">
-
-     <button class="widget-card" data-target="location">
-        <div class="widget-icon">📍</div>
-        <div class="widget-title">VENUE</div>
-        <div class="widget-text">Lipa Grill</div>
-    </button>
-
-    <button class="widget-card" data-target="countdown">
-        <div class="widget-icon">⏳</div>
-        <div class="widget-title">COUNTDOWN</div>
-        <div class="widget-text">Until the celebration</div>
-    </button>
-
-    <button class="widget-card" data-target="rsvp">
-        <div class="widget-icon">💌</div>
-        <div class="widget-title">RSVP & MESSAGE</div>
-        <div class="widget-text">Let us know you're coming</div>
-    </button>
-
-    <button class="widget-card" data-target="gift">
-        <div class="widget-icon">🎁</div>
-        <div class="widget-title">GIFT GUIDE</div>
-        <div class="widget-text">A little something for Tatay</div>
-    </button>
-
-</div>
-
-</div>
-
-</section>
-<section id="invitation" style="padding:80px 20px;background:#0b2b23;text-align:center;">
-<h2 style="font-family:Cinzel,serif;font-size:42px;color:#d4af37;">You're Invited</h2>
-<p style="max-width:700px;margin:auto;font-size:18px;line-height:1.9;color:#eee;">
-Malugod namin kayong inaanyayahan na samahan kami sa pagdiriwang ng <strong>ika-50 kaarawan</strong> ni <strong>Ruperto G. Magabo Jr.</strong>.<br><br>
-Isang gabi ng masasarap na pagkain, kwentuhan, tawanan at masasayang alaala kasama ang pamilya at mga kaibigan.<br><br>
-Ang inyong presensya ang pinakamagandang regalo na aming matatanggap.
-</p>
-</section>
-  <section id="countdown" class="countdown-section">
-
-    <h2>⏳ Countdown to the Celebration</h2>
-
-    <div class="countdown">
-
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>Days</small>
-        </div>
-
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>Hours</small>
-        </div>
-
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>Minutes</small>
-        </div>
-
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>Seconds</small>
-        </div>
-
-    </div>
-
-    <h3 id="countdownMessage"></h3>
-
-</section>
-<section id="location" class="location-section">
-    <div class="container">
-
-        <h2>📍 Event Location</h2>
-
-        <h3>Lipa Grill</h3>
-
-        <p>Lipa City, Batangas</p>
-
-        <a
-            href="https://maps.app.goo.gl/Q2q3WU1bspHtZnKp6"
-            target="_blank"
-            class="map-btn">
-
-            🗺 Open in Google Maps
-
-        </a>
-
-        <div class="map-container">
-
-             <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.396185997948!2d121.16242507577118!3d13.934999986476242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6ca5e344afc3%3A0xe4b07eb040b6776d!2sLipa%20Grill%20-%20Lipa!5e0!3m2!1sen!2sph!4v1786130699603!5m2!1sen!2sph"
-        width="100%"
-        height="400"
-        style="border:0;border-radius:18px;"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="strict-origin-when-cross-origin">
-    </iframe>
-
-        </div>
-
-    </div>
-
-</section>
-
-</div> <!-- END ng website -->
-
-<audio id="bgMusic" loop>
-    <source src="assets/music/birthday.mp3" type="audio/mpeg">
+<!--
+<audio
+    id="bgMusic"
+    loop>
+    <source
+        src="assets/music/birthday.mp3"
+        type="audio/mpeg">
 </audio>
+-->
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<div
+    id="website"
+    style="display:none;">
+
+
+
+    <!-- =================================================
+         HERO / PHOTO GALLERY
+    ================================================== -->
+
+    <section class="hero">
+
+        <div class="gallery-widget">
+
+
+            <!-- PREVIOUS -->
+
+            <button
+                class="gallery-arrow gallery-prev"
+                id="galleryPrev">
+
+                ‹
+
+            </button>
+
+
+            <!-- PHOTOS -->
+
+            <div class="gallery-slides">
+
+
+                <div class="gallery-slide active">
+
+                    <img
+                        src="assets/photos/tatay1.jpeg"
+                        alt="Ruperto G. Magabo Jr.">
+
+                </div>
+
+
+                <div class="gallery-slide">
+
+                    <img
+                        src="assets/photos/tatay2.jpeg"
+                        alt="Ruperto G. Magabo Jr.">
+
+                </div>
+
+
+                <div class="gallery-slide">
+
+                    <img
+                        src="assets/photos/tatay3.jpeg"
+                        alt="Ruperto G. Magabo Jr.">
+
+                </div>
+
+
+                <div class="gallery-slide">
+
+                    <img
+                        src="assets/photos/tatay4.jpeg"
+                        alt="Ruperto G. Magabo Jr.">
+
+                </div>
+
+
+                <div class="gallery-slide">
+
+                    <img
+                        src="assets/photos/tatay5.jpeg"
+                        alt="Ruperto G. Magabo Jr.">
+
+                </div>
+
+
+            </div>
+
+
+            <!-- NEXT -->
+
+            <button
+                class="gallery-arrow gallery-next"
+                id="galleryNext">
+
+                ›
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INVITATION WIDGETS
+    ================================================== -->
+
+    <div class="invitation-widgets">
+
+
+        <!-- VENUE -->
+
+        <button
+            class="widget-card"
+            data-target="location">
+
+            <div class="widget-icon">
+                📍
+            </div>
+
+            <div class="widget-title">
+                VENUE
+            </div>
+
+            <div class="widget-text">
+                Lipa Grill
+            </div>
+
+        </button>
+
+
+
+        <!-- COUNTDOWN -->
+
+        <button
+            class="widget-card"
+            data-target="countdown">
+
+            <div class="widget-icon">
+                ⏳
+            </div>
+
+            <div class="widget-title">
+                COUNTDOWN
+            </div>
+
+            <div class="widget-text">
+                Until the celebration
+            </div>
+
+        </button>
+
+
+
+        <!-- RSVP -->
+
+        <button
+            class="widget-card"
+            data-target="rsvp">
+
+            <div class="widget-icon">
+                💌
+            </div>
+
+            <div class="widget-title">
+                RSVP & MESSAGE
+            </div>
+
+            <div class="widget-text">
+                Let us know you're coming
+            </div>
+
+        </button>
+
+
+
+        <!-- GIFT -->
+
+        <button
+            class="widget-card"
+            data-target="gift">
+
+            <div class="widget-icon">
+                🎁
+            </div>
+
+            <div class="widget-title">
+                GIFT GUIDE
+            </div>
+
+            <div class="widget-text">
+                A little something for Tatay
+            </div>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         MAIN INVITATION
+    ================================================== -->
+
+    <section
+        id="invitation"
+        style="
+            padding:80px 20px;
+            background:#0b2b23;
+            text-align:center;
+        ">
+
+
+        <h2
+            style="
+                font-family:Cinzel,serif;
+                font-size:42px;
+                color:#d4af37;
+            ">
+
+            You're Invited
+
+        </h2>
+
+
+        <p
+            style="
+                max-width:700px;
+                margin:auto;
+                font-size:18px;
+                line-height:1.9;
+                color:#eee;
+            ">
+
+            Malugod namin kayong inaanyayahan na
+            samahan kami sa pagdiriwang ng
+            <strong>ika-50 kaarawan</strong> ni
+            <strong>Ruperto G. Magabo Jr.</strong>.
+
+            <br><br>
+
+            Isang gabi ng masasayang pagkain,
+            kwentuhan, tawanan at masasayang alaala
+            kasama ang pamilya at mga kaibigan.
+
+            <br><br>
+
+            Ang inyong presensya ang pinakamagandang
+            regalo na aming matatanggap.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         COUNTDOWN PAGE
+    ================================================== -->
+
+    <section
+        id="countdownPage"
+        class="invitation-page">
+
+
+        <button
+            class="page-back-btn"
+            data-back="home">
+
+            ← Back to Invitation
+
+        </button>
+
+
+        <section
+            id="countdown"
+            class="countdown-section">
+
+
+            <h2>
+                ⏳ Countdown to the Celebration
+            </h2>
+
+
+            <div class="countdown">
+
+
+                <div class="time-box">
+
+                    <span id="days">
+                        00
+                    </span>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="hours">
+                        00
+                    </span>
+
+                    <small>
+                        Hours
+                    </small>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="minutes">
+                        00
+                    </span>
+
+                    <small>
+                        Minutes
+                    </small>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="seconds">
+                        00
+                    </span>
+
+                    <small>
+                        Seconds
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+            <h3 id="countdownMessage"></h3>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOCATION / VENUE PAGE
+    ================================================== -->
+
+    <section
+        id="locationPage"
+        class="invitation-page">
+
+
+        <button
+            class="page-back-btn"
+            data-back="home">
+
+            ← Back to Invitation
+
+        </button>
+
+
+
+        <section
+            id="location"
+            class="location-section">
+
+
+            <div class="container">
+
+
+                <h2>
+                    📍 Event Location
+                </h2>
+
+
+                <h3>
+                    Lipa Grill
+                </h3>
+
+
+                <p>
+                    Lipa City, Batangas
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/Q2q3WU1bspHtZnKp6"
+                    target="_blank"
+                    class="map-btn">
+
+                    🗺 Open in Google Maps
+
+                </a>
+
+
+
+                <div class="map-container">
+
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.396185997948!2d121.16242507577118!3d13.934999986476242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6ca5e344afc3%3A0xe4b07eb040b6776d!2sLipa%20Grill%20-%20Lipa!5e0!3m2!1sen!2sph!4v1786130699603!5m2!1sen!2sph"
+                        width="100%"
+                        height="400"
+                        style="border:0;border-radius:18px;"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RSVP PAGE - PLACEHOLDER FOR NOW
+    ================================================== -->
+
+    <section
+        id="rsvpPage"
+        class="invitation-page">
+
+
+        <button
+            class="page-back-btn"
+            data-back="home">
+
+            ← Back to Invitation
+
+        </button>
+
+
+        <section
+            id="rsvp"
+            class="location-section">
+
+
+            <h2>
+                💌 RSVP & Message
+            </h2>
+
+
+            <p>
+                RSVP form will be added here.
+            </p>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         GIFT GUIDE PAGE - PLACEHOLDER FOR NOW
+    ================================================== -->
+
+    <section
+        id="giftPage"
+        class="invitation-page">
+
+
+        <button
+            class="page-back-btn"
+            data-back="home">
+
+            ← Back to Invitation
+
+        </button>
+
+
+        <section
+            id="gift"
+            class="location-section">
+
+
+            <h2>
+                🎁 Gift Guide
+            </h2>
+
+
+            <p>
+                Gift guide will be added here.
+            </p>
+
+
+        </section>
+
+
+    </section>
+
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
