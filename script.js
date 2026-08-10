@@ -509,10 +509,13 @@ if (rsvpForm) {
         }
 
         emailjs.sendForm(
-            "service_tzjnl1u",
-            "template_kkx1oxu",
-            rsvpForm
-        )
+    "service_tzjnl1u",
+    "template_kkx1oxu",
+    rsvpForm,
+    {
+        publicKey: "udwniAMHg94TYKIsn"
+    }
+)
 
         .then(function() {
 
