@@ -498,16 +498,27 @@ if (rsvpForm) {
         event.preventDefault();
         event.stopPropagation();
 
-        const guestName =
-            document.getElementById("guestName").value.trim();
+      const guestNameEl =
+    rsvpForm.querySelector('input[type="text"]');
 
-        const attendance =
-            document.querySelector(
-                'input[name="attendance"]:checked'
-            );
+const attendance =
+    rsvpForm.querySelector(
+        'input[name="attendance"]:checked'
+    );
 
-        const message =
-            document.getElementById("message").value.trim();
+const messageEl =
+    rsvpForm.querySelector('textarea');
+
+if (!guestNameEl || !messageEl) {
+    console.error("RSVP name or message field not found.");
+    return;
+}
+
+const guestName =
+    guestNameEl.value.trim();
+
+const message =
+    messageEl.value.trim();
 
 
         if (!guestName || !attendance) {
