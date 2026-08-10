@@ -576,7 +576,7 @@ const message =
             // Return to homepage
             setTimeout(function() {
 
-                window.location.href = "index.html";
+                window.location.href = "/ruperto50/";
 
             }, 1500);
 
