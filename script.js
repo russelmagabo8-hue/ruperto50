@@ -542,8 +542,8 @@ const message =
         }
 
 
-       emailjs.send(
-    "default_service",
+  emailjs.send(
+    "service_tzjnl1u",
     "template_kky1xou",
     {
         guest_name: guestName,
