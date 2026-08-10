@@ -760,14 +760,15 @@ MOBILE
     margin: 0 auto;
     padding: 0 7px;
 
-    display: grid;
-     grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     gap: 5px;
 }
 
 .widget-card {
     min-width: 0;
-    width: 100%;
+    width: 180px;
 
     padding: 18px 3px;
 
