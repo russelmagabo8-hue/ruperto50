@@ -483,5 +483,110 @@ backButtons.forEach(button => {
     });
 
 });
+    // =========================
+// RSVP FORM + EMAILJS
+// =========================
+
+const rsvpForm =
+    document.getElementById("rsvpForm");
+
+const rsvpStatus =
+    document.getElementById("rsvpStatus");
+
+const rsvpSubmit =
+    document.getElementById("rsvpSubmit");
+
+
+if(rsvpForm){
+
+    rsvpForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+
+        // Disable button habang nagsesend
+        if(rsvpSubmit){
+
+            rsvpSubmit.disabled = true;
+
+            rsvpSubmit.textContent =
+                "Sending... 💌";
+
+        }
+
+
+        if(rsvpStatus){
+
+            rsvpStatus.textContent =
+                "Sending your RSVP...";
+
+        }
+
+
+        // SEND EMAIL
+        emailjs.sendForm(
+            "service_tzjnl1u",
+            "template_kkx1oxu",
+            this
+        )
+
+        .then(() => {
+
+            console.log("RSVP SENT SUCCESSFULLY");
+
+
+            if(rsvpStatus){
+
+                rsvpStatus.textContent =
+                    "Thank you! Your RSVP has been sent successfully. 💌";
+
+            }
+
+
+            if(rsvpSubmit){
+
+                rsvpSubmit.disabled = false;
+
+                rsvpSubmit.textContent =
+                    "✓ RSVP Sent";
+
+            }
+
+
+            // Clear form
+            rsvpForm.reset();
+
+        })
+
+        .catch((error) => {
+
+            console.error(
+                "RSVP EMAIL ERROR:",
+                error
+            );
+
+
+            if(rsvpStatus){
+
+                rsvpStatus.textContent =
+                    "Sorry, something went wrong. Please try again.";
+
+            }
+
+
+            if(rsvpSubmit){
+
+                rsvpSubmit.disabled = false;
+
+                rsvpSubmit.textContent =
+                    "💌 Submit RSVP";
+
+            }
+
+        });
+
+    });
+
+}
 
 });
