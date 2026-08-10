@@ -41,7 +41,43 @@ function stopMusic(){
 }
 
 window.addEventListener("pagehide", stopMusic);
+// =========================
+// CONFETTI
+// =========================
 
+function createConfetti(){
+
+    const confettiCount = 100;
+
+    for(let i = 0; i < confettiCount; i++){
+
+        const confetti = document.createElement("span");
+
+        confetti.className = "confetti";
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.animationDelay =
+            Math.random() * 0.8 + "s";
+
+        confetti.style.animationDuration =
+            (2.5 + Math.random() * 2) + "s";
+
+        confetti.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+
+            confetti.remove();
+
+        }, 5000);
+
+    }
+
+}
 
     // =========================
     // FLOATING PARTICLES
@@ -335,6 +371,9 @@ if(openInvitation){
 
         // START MUSIC IMMEDIATELY
         playMusic();
+
+         // CELEBRATION CONFETTI
+    createConfetti();
 
         // FADE OUT INTRO
         intro.style.opacity = "0";
