@@ -525,7 +525,7 @@ backButtons.forEach(button => {
 
         if (widgets) {
 
-            widgets.style.display = "grid";
+            widgets.style.display = "flex";
 
         }
 
