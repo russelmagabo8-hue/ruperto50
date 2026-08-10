@@ -543,15 +543,15 @@ const message =
 
 
   emailjs.send(
-    "service_tzjnl1u",
+    "service_tjznl1u",
     "template_kky1xou",
     {
         guest_name: guestName,
         attendance: attendance.value,
         message: message
-    }
+    },
+    "udwniAMHg94TYKIsn"
 )
-
         .then(function(response) {
 
             console.log(
