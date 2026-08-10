@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const bgMusic = document.getElementById("bgMusic");
 
-    let musicStarted = false;
+let musicStarted = false;
 
-    function playMusic(){
+function playMusic(){
 
     if(!bgMusic) return;
 
@@ -29,6 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 }
+
+function stopMusic(){
+
+    if(!bgMusic) return;
+
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    musicStarted = false;
+
+}
+
+window.addEventListener("pagehide", stopMusic);
 
 
     // =========================
