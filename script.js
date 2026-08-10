@@ -297,53 +297,55 @@ if(galleryNext){
 showGallerySlide(0);
 
     // =========================
-    // OPEN INVITATION
-    // =========================
+// OPEN INVITATION
+// =========================
 
-    const openInvitation =
-        document.getElementById("openInvitation");
+const openInvitation =
+    document.getElementById("openInvitation");
 
-    const intro =
-        document.getElementById("introScreen");
+const intro =
+    document.getElementById("introScreen");
 
-    const website =
-        document.getElementById("website");
-
-
-    if(website){
-
-        website.style.display = "none";
-
-    }
+const website =
+    document.getElementById("website");
 
 
-    if(openInvitation){
+if(website){
 
-        openInvitation.addEventListener("click", () => {
+    website.style.display = "none";
 
-            intro.style.opacity = "0";
-
-
-            setTimeout(() => {
-
-                intro.style.display = "none";
-
-                website.style.display = "block";
-
-                playMusic();
+}
 
 
-                window.scrollTo({
+if(openInvitation){
 
-                    top:0,
+    openInvitation.addEventListener("click", () => {
 
-                    behavior:"smooth"
+        // START MUSIC IMMEDIATELY
+        playMusic();
 
-                });
+        // FADE OUT INTRO
+        intro.style.opacity = "0";
 
-            },700);
 
-        });
+        setTimeout(() => {
+
+            intro.style.display = "none";
+
+            website.style.display = "block";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        },700);
+
+    });
+
 
     }
 // =========================
