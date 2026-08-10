@@ -341,11 +341,33 @@ showGallerySlide(0);
 
     }
 // =========================
-// INVITATION WIDGETS
+// INVITATION PAGE NAVIGATION
 // =========================
 
 const widgetCards =
     document.querySelectorAll(".widget-card");
+
+const invitationPages =
+    document.querySelectorAll(".invitation-page");
+
+const backButtons =
+    document.querySelectorAll(".page-back-btn");
+
+
+// =========================
+// HIDE ALL PAGES AT START
+// =========================
+
+invitationPages.forEach(page => {
+
+    page.style.display = "none";
+
+});
+
+
+// =========================
+// OPEN WIDGET PAGE
+// =========================
 
 widgetCards.forEach(widget => {
 
@@ -354,17 +376,105 @@ widgetCards.forEach(widget => {
         const targetId =
             widget.getAttribute("data-target");
 
-        const target =
-            document.getElementById(targetId);
+        const page =
+            document.getElementById(targetId + "Page");
 
-        if(target){
+        if(!page) return;
 
-            target.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
 
+        // Hide main invitation
+        const hero =
+            document.querySelector(".hero");
+
+        const widgets =
+            document.querySelector(".invitation-widgets");
+
+        const invitation =
+            document.getElementById("invitation");
+
+
+        if(hero){
+            hero.style.display = "none";
         }
+
+        if(widgets){
+            widgets.style.display = "none";
+        }
+
+        if(invitation){
+            invitation.style.display = "none";
+        }
+
+
+        // Hide all pages
+        invitationPages.forEach(item => {
+
+            item.style.display = "none";
+
+        });
+
+
+        // Show selected page
+        page.style.display = "block";
+
+
+        // Go to top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+
+// =========================
+// BACK TO INVITATION
+// =========================
+
+backButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+
+        // Hide all separate pages
+        invitationPages.forEach(page => {
+
+            page.style.display = "none";
+
+        });
+
+
+        // Show main invitation
+        const hero =
+            document.querySelector(".hero");
+
+        const widgets =
+            document.querySelector(".invitation-widgets");
+
+        const invitation =
+            document.getElementById("invitation");
+
+
+        if(hero){
+            hero.style.display = "block";
+        }
+
+        if(widgets){
+            widgets.style.display = "flex";
+        }
+
+        if(invitation){
+            invitation.style.display = "block";
+        }
+
+
+        // Go back to top
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
     });
 
