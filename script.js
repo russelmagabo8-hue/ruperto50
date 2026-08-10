@@ -355,35 +355,41 @@ const backButtons =
 
 
 // =========================
-// HIDE ALL PAGES AT START
-// =========================
-
-invitationPages.forEach(page => {
-
-    page.style.display = "none";
-
-});
-
-
-// =========================
 // OPEN WIDGET PAGE
 // =========================
 
 widgetCards.forEach(widget => {
 
-    widget.addEventListener("click", () => {
+    widget.addEventListener("click", function () {
 
         const targetId =
-            widget.getAttribute("data-target");
+            this.getAttribute("data-target");
 
-        const page =
-            document.getElementById(targetId + "Page");
+        const pageId =
+            targetId + "Page";
 
-        if(!page) return;
+        const targetPage =
+            document.getElementById(pageId);
+
+        if (!targetPage) {
+
+            console.log("Page not found:", pageId);
+
+            return;
+
+        }
 
 
-        // Hide main invitation
-        const hero =
+        // Hide every invitation page
+        invitationPages.forEach(page => {
+
+            page.style.display = "none";
+
+        });
+
+
+        // Hide HOME
+        const websiteHome =
             document.querySelector(".hero");
 
         const widgets =
@@ -393,36 +399,31 @@ widgetCards.forEach(widget => {
             document.getElementById("invitation");
 
 
-        if(hero){
-            hero.style.display = "none";
+        if (websiteHome) {
+
+            websiteHome.style.display = "none";
+
         }
 
-        if(widgets){
+        if (widgets) {
+
             widgets.style.display = "none";
+
         }
 
-        if(invitation){
+        if (invitation) {
+
             invitation.style.display = "none";
+
         }
-
-
-        // Hide all pages
-        invitationPages.forEach(item => {
-
-            item.style.display = "none";
-
-        });
 
 
         // Show selected page
-        page.style.display = "block";
+        targetPage.style.display = "block";
 
 
-        // Go to top
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        // Scroll to top
+        window.scrollTo(0, 0);
 
     });
 
@@ -435,7 +436,7 @@ widgetCards.forEach(widget => {
 
 backButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
 
 
         // Hide all separate pages
@@ -446,8 +447,8 @@ backButtons.forEach(button => {
         });
 
 
-        // Show main invitation
-        const hero =
+        // Show HOME
+        const websiteHome =
             document.querySelector(".hero");
 
         const widgets =
@@ -457,24 +458,27 @@ backButtons.forEach(button => {
             document.getElementById("invitation");
 
 
-        if(hero){
-            hero.style.display = "block";
+        if (websiteHome) {
+
+            websiteHome.style.display = "block";
+
         }
 
-        if(widgets){
-            widgets.style.display = "flex";
+        if (widgets) {
+
+            widgets.style.display = "grid";
+
         }
 
-        if(invitation){
+        if (invitation) {
+
             invitation.style.display = "block";
+
         }
 
 
-        // Go back to top
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        // Scroll to top
+        window.scrollTo(0, 0);
 
     });
 
