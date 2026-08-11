@@ -117,7 +117,7 @@ function createConfetti(){
     // =========================
 
     const targetDate =
-        new Date("August 15, 2026 14:00:00").getTime();
+        new Date("August 15, 2026 11:00:00").getTime();
 
     const daysEl =
         document.getElementById("days");
