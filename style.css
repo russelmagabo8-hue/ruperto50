@@ -760,7 +760,7 @@ MOBILE
     margin: 0 auto;
     padding: 0 7px;
 
-    display: flex !important;
+   display: flex;
     flex-direction: row !important;
     justify-content: center;
     align-items: stretch;
@@ -832,7 +832,7 @@ MOBILE
         width: 100% !important;
         padding: 0 7px;
 
-        display: flex !important;
+        display: flex;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
 
