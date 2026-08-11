@@ -203,6 +203,54 @@ opacity:0;
     color:#f5d26b;
 }
 
+
+/* EVENT DATE & TIME */
+
+.event-date-info {
+    text-align: center;
+    margin: 10px auto 25px;
+    padding: 12px 28px;
+
+    width: fit-content;
+    min-width: 280px;
+
+    border: 1px solid rgba(212,175,55,.45);
+    border-radius: 12px;
+
+    background: rgba(212,175,55,.05);
+}
+
+.event-date {
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold2);
+}
+
+.event-time {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+@media(max-width:768px){
+
+    .time-box{
+        width:120px;
+        height:120px;
+    }
+
+    .time-box span{
+        font-size:42px;
+    }
+
+    .countdown-section h2{
+        font-size:32px;
+    }
+
+}
+
 @media(max-width:768px){
 
 .time-box{
@@ -1182,6 +1230,7 @@ MOBILE
             rotate(720deg);
         opacity: 0;
     }
+    
 }
 
 
