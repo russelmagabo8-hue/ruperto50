@@ -464,12 +464,7 @@ widgetCards.forEach(widget => {
 
         }
 
-        if (widgets) {
-
-            widgets.style.display = "none";
-
-        }
-
+        
         if (invitation) {
 
             invitation.style.display = "none";
@@ -532,7 +527,7 @@ backButtons.forEach(button => {
 
         if (widgets) {
 
-    widgets.style.display = "flex";
+    widgets.style.setProperty("display", "flex", "important");
 
 }
 
