@@ -1185,11 +1185,3 @@ MOBILE
 }
 
 
-/* =========================
-   HIDE HOME WIDGETS ON
-   SEPARATE INVITATION PAGES
-========================= */
-
-body:has(.invitation-page.active) .invitation-widgets {
-    display: none !important;
-}
