@@ -525,9 +525,9 @@ backButtons.forEach(button => {
 
         if (widgets) {
 
-            widgets.style.display = "";
+    widgets.style.display = "flex";
 
-        }
+}
 
         if (invitation) {
 
