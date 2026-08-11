@@ -480,6 +480,13 @@ widgetCards.forEach(widget => {
         // Show selected page
         targetPage.style.display = "block";
 
+if (widgets) {
+    widgets.style.setProperty("display", "none", "important");
+}
+
+if (invitation) {
+    invitation.style.display = "none";
+}
 
         // Scroll to top
         window.scrollTo(0, 0);
